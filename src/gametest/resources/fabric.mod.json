@@ -1,0 +1,18 @@
+{
+	"schemaVersion": 1,
+	"id": "particle-emote-gametest",
+	"version": "1.0.0",
+	"name": "Particle Emote smoke test",
+	"description": "Joins a world and throws an emote, which is the whole mod.",
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"justfatlard.particle_emote.gametest.EmotesThrow"
+		]
+	},
+	"depends": {
+		"particle-emote": "*",
+		"fabric-client-gametest-api-v1": "*"
+	}
+}

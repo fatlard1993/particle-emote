@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "particle-emote",
+	"version": "${version}",
+	"name": "Particle Emote",
+	"description": "A menu of particles to throw off yourself. A key, a grid, a burst everyone nearby can see.",
+	"authors": [
+		"justfatlard"
+	],
+	"contact": {
+		"homepage": "https://github.com/fatlard1993/particle-emote",
+		"sources": "https://github.com/fatlard1993/particle-emote",
+		"issues": "https://github.com/fatlard1993/particle-emote/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/particle-emote/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"justfatlard.particle_emote.Main"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${loaderVersion}",
+		"minecraft": "${minecraftDependency}",
+		"java": ">=25",
+		"pandorical": ">=15.0.0",
+		"fabric-api": "${fabricApiVersion}"
+	}
+}
