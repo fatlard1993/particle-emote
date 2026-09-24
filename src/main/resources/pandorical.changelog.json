@@ -5,8 +5,10 @@
 	],
 	"versions": {
 		"1.0.1": [
-			"Twelve emotes on one key: love, yes, no, music, party, magic, spark, boom, fire, smoke, snow and poof. Every button wears the particle it throws.",
-			"A burst lasts a second and follows you as you walk, and /emote love skips the menu for a command block or a macro."
+			"Twelve emotes on one key: love, yes, no, music, party, magic, spark, boom, fire, smoke, snow, poof.",
+			"Every button wears the particle it throws.",
+			"A burst lasts a second and follows you as you walk.",
+			"/emote love skips the menu for a command block or a macro."
 		]
 	}
 }
