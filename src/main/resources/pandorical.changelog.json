@@ -4,6 +4,9 @@
 		"For saying yes across a build site without stopping to type."
 	],
 	"versions": {
+		"1.0.2": [
+			"A mod menu icon showing four of the emotes, rather than loose confetti."
+		],
 		"1.0.1": [
 			"Twelve emotes on one key: love, yes, no, music, party, magic, spark, boom, fire, smoke, snow, poof.",
 			"Every button wears the particle it throws.",
