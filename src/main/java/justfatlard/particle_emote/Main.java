@@ -90,13 +90,14 @@ public class Main implements ModInitializer {
 	 *
 	 * <p>Pandorical's own grid is the one this mod opens on a key; an action menu is the player's,
 	 * openable on a key of their choosing and editable down to the four they actually use. Both
-	 * run the same command, so neither is the real one.
+	 * run the same command, so neither is the real one. Its buttons wear the same particle pictures
+	 * the grid does.
 	 */
 	private void seedActionMenu() {
 		List<ActionMenuApi.Button> buttons = new ArrayList<>();
 		for (Emotes.Emote emote : Emotes.all().values()) {
 			buttons.add(ActionMenuApi.Button.runs(
-				emote.item(), emote.label(), "emote " + emote.id()));
+				EmoteMenu.icon(emote), emote.label(), "emote " + emote.id()));
 		}
 		PandoricalApi.actionMenus().suggestMenu(MOD_ID + ":emotes", "Emotes", buttons);
 	}

@@ -88,8 +88,7 @@ public final class EmoteMenu {
 				MARGIN + TITLE_H + row * (BUTTON + GAP),
 				BUTTON, BUTTON,
 				Map.of(
-					// The particle's own texture, lifted from the game by generate_icons.py.
-					ComponentType.PROP_ICON, Main.MOD_ID + ":emote/" + emote.id(),
+					ComponentType.PROP_ICON, sprite(emote),
 					// The word it lost when the icon took its place. A heart needs no caption;
 					// a grey cloud very much does.
 					ComponentType.PROP_TOOLTIP, emote.label()));
@@ -97,5 +96,15 @@ public final class EmoteMenu {
 		}
 
 		PandoricalApi.screens().open(player, screen.build());
+	}
+
+	/** The particle's own picture, lifted from the game by generate_icons.py. */
+	static String sprite(Emotes.Emote emote) {
+		return Main.MOD_ID + ":emote/" + emote.id();
+	}
+
+	/** The same picture, as an action menu's button wears it. */
+	static String icon(Emotes.Emote emote) {
+		return "sprite:" + sprite(emote);
 	}
 }

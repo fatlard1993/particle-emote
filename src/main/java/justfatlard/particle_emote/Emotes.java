@@ -28,36 +28,35 @@ public final class Emotes {
 	 * @param particle what is actually thrown
 	 * @param spread   how wide the burst sits around the player, in blocks
 	 * @param rising   whether it climbs on its own; the ones that do are given less push
-	 * @param item     what an action-menu button wears for it: those take an item, not a particle
 	 */
 	public record Emote(String id, String label, SimpleParticleType particle, double spread,
-			boolean rising, String item) {}
+			boolean rising) {}
 
 	private static final Map<String, Emote> BY_ID = new LinkedHashMap<>();
 
 	private static void add(String id, String label, SimpleParticleType particle, double spread,
-			boolean rising, String item) {
-		BY_ID.put(id, new Emote(id, label, particle, spread, rising, "minecraft:" + item));
+			boolean rising) {
+		BY_ID.put(id, new Emote(id, label, particle, spread, rising));
 	}
 
 	static {
 		// Row one: the four you will actually use, in the corner your hand lands on first.
-		add("love", "Love", ParticleTypes.HEART, 0.4, true, "poppy");
-		add("yes", "Yes", ParticleTypes.HAPPY_VILLAGER, 0.5, true, "emerald");
-		add("no", "No", ParticleTypes.ANGRY_VILLAGER, 0.3, true, "redstone");
-		add("music", "Music", ParticleTypes.NOTE, 0.5, true, "note_block");
+		add("love", "Love", ParticleTypes.HEART, 0.4, true);
+		add("yes", "Yes", ParticleTypes.HAPPY_VILLAGER, 0.5, true);
+		add("no", "No", ParticleTypes.ANGRY_VILLAGER, 0.3, true);
+		add("music", "Music", ParticleTypes.NOTE, 0.5, true);
 
 		// Row two: bigger feelings.
-		add("party", "Party", ParticleTypes.TOTEM_OF_UNDYING, 0.5, false, "totem_of_undying");
-		add("magic", "Magic", ParticleTypes.ENCHANT, 0.8, false, "enchanting_table");
-		add("spark", "Spark", ParticleTypes.ELECTRIC_SPARK, 0.4, false, "lightning_rod");
-		add("boom", "Boom", ParticleTypes.EXPLOSION, 0.3, false, "tnt");
+		add("party", "Party", ParticleTypes.TOTEM_OF_UNDYING, 0.5, false);
+		add("magic", "Magic", ParticleTypes.ENCHANT, 0.8, false);
+		add("spark", "Spark", ParticleTypes.ELECTRIC_SPARK, 0.4, false);
+		add("boom", "Boom", ParticleTypes.EXPLOSION, 0.3, false);
 
 		// Row three: weather and smoke, for standing about looking like something happened.
-		add("fire", "Fire", ParticleTypes.FLAME, 0.4, true, "blaze_powder");
-		add("smoke", "Smoke", ParticleTypes.LARGE_SMOKE, 0.3, true, "campfire");
-		add("snow", "Snow", ParticleTypes.SNOWFLAKE, 0.6, false, "snowball");
-		add("poof", "Poof", ParticleTypes.CLOUD, 0.4, false, "white_wool");
+		add("fire", "Fire", ParticleTypes.FLAME, 0.4, true);
+		add("smoke", "Smoke", ParticleTypes.LARGE_SMOKE, 0.3, true);
+		add("snow", "Snow", ParticleTypes.SNOWFLAKE, 0.6, false);
+		add("poof", "Poof", ParticleTypes.CLOUD, 0.4, false);
 	}
 
 	public static @Nullable Emote of(String id) {

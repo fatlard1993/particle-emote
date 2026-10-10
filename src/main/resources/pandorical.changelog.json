@@ -4,6 +4,9 @@
 		"For saying yes across a build site without stopping to type."
 	],
 	"versions": {
+		"1.0.3": [
+			"The Emotes action menu shows each emote's particle on its button, as the emote grid does, instead of an item."
+		],
 		"1.0.2": [
 			"A mod menu icon showing four of the emotes, rather than loose confetti."
 		],
