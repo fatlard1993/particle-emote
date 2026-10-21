@@ -103,8 +103,24 @@ public final class EmoteMenu {
 		return Main.MOD_ID + ":emote/" + emote.id();
 	}
 
-	/** The same picture, as an action menu's button wears it. */
+	/** The same picture, as an action menu's button wears it; an item before Pandorical 15.17 took sprites. */
 	static String icon(Emotes.Emote emote) {
-		return "sprite:" + sprite(emote);
+		return SPRITE_ICONS ? "sprite:" + sprite(emote) : ITEM_ICONS.getOrDefault(emote.id(), "minecraft:firework_star");
 	}
+
+	private static final boolean SPRITE_ICONS = PandoricalVersion.atLeast("15.17.0");
+
+	private static final java.util.Map<String, String> ITEM_ICONS = java.util.Map.ofEntries(
+		java.util.Map.entry("love", "minecraft:poppy"),
+		java.util.Map.entry("yes", "minecraft:emerald"),
+		java.util.Map.entry("no", "minecraft:redstone"),
+		java.util.Map.entry("music", "minecraft:note_block"),
+		java.util.Map.entry("party", "minecraft:totem_of_undying"),
+		java.util.Map.entry("magic", "minecraft:enchanting_table"),
+		java.util.Map.entry("spark", "minecraft:lightning_rod"),
+		java.util.Map.entry("boom", "minecraft:tnt"),
+		java.util.Map.entry("fire", "minecraft:blaze_powder"),
+		java.util.Map.entry("smoke", "minecraft:campfire"),
+		java.util.Map.entry("snow", "minecraft:snowball"),
+		java.util.Map.entry("poof", "minecraft:white_wool"));
 }

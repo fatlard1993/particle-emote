@@ -4,6 +4,9 @@
 		"For saying yes across a build site without stopping to type."
 	],
 	"versions": {
+		"1.0.4": [
+			"Works with Pandorical as old as 15.13.0. Before 15.17 the emote menu's buttons wear an item instead of the particle."
+		],
 		"1.0.3": [
 			"The Emotes action menu shows each emote's particle on its button, as the emote grid does, instead of an item."
 		],
