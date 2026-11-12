@@ -1,0 +1,30 @@
+{
+  "demo": {
+    "name": "Particle Emote",
+    "icon": "minecraft:firework_star",
+    "about": [
+      "A menu of particles to throw off yourself, for saying yes, no or hooray without stopping to type.",
+      "Press V (or type /emote) and pick one, then emote again and walk off to trail the burst behind you."
+    ]
+  },
+  "pvp_preset": 1,
+  "needs": ["particle-emote"],
+  "preset": {
+    "name": "Particle Emote",
+    "icon": "minecraft:firework_star",
+    "pvp": false,
+    "game_mode": "survival",
+    "entry_kit": [
+      {"slot": 0, "item": {"id": "minecraft:cooked_beef", "count": 8}}
+    ],
+    "respawn_kit": "entry",
+    "goal": "time",
+    "mobs": "off",
+    "life": 15,
+    "size": 2,
+    "world": "overworld",
+    "shape": "natural",
+    "biome": "minecraft:cherry_grove",
+    "weather": "clear"
+  }
+}
